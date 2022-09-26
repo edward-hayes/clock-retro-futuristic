@@ -1,0 +1,62 @@
+.background {
+  viewport-fill: #635666;
+}
+
+#myLabel {
+  font-size: 80;
+  font-family: System-Bold;
+  text-length: 32;
+  text-anchor: middle;
+  x: 50%;
+  y: 50%+40;
+  fill: cyan;
+}
+
+.num-background {
+  fill: cyan;
+  x: $+3%;
+  y: 30%;
+  width: 20%;
+  height: 60%;
+  opacity: .1;
+}
+
+.num-foreground {
+  fill: cyan;
+  x: $+3%;
+  y: 30%;
+  width: 20%;
+  height: 60%;
+}
+
+.seperator {
+  opacity: .8; 
+  x: $+3%;
+  y: 40%;
+  width: 5%;
+  height: 71;
+}
+
+.prime {
+  x: 0;
+}
+
+#top {
+  x: 4%;
+  y: 0;
+  width: 96%;
+  height: 60%;
+}
+
+#bottom {
+  x: 0;
+  y: $;
+  width: 100%;
+  height: 40%;
+}
+
+#hello {
+  fill: goldenrod;
+  x: 50%;
+  text-anchor: middle;
+}
