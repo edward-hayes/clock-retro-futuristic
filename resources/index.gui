@@ -1,0 +1,20 @@
+<svg class="background">
+  <section id="top">
+
+      <image href="8.png"  class="num-background prime" />
+      <image href="8.png"  class="num-background" />
+      <image href="separator.png" class="num-background seperator" />
+      <image href="8.png"  class="num-background" />
+      <image href="8.png"  class="num-background" />
+
+      <image id="hours1" href="2.png" class="num-foreground prime" />
+      <image id="hours2" href="3.png" class="num-foreground" />
+      <image href="separator.png" class="num-foreground seperator" />
+      <image id="mins1" href="3.png"  class="num-foreground" />
+      <image id="mins2" href="7.png"  class="num-foreground" />
+
+  </section>
+  <section id="bottom">
+    <text id="hello" font-family="System-Regular">Hello World!</text>
+  </section>
+</svg>
