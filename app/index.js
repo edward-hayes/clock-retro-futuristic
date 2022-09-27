@@ -1,13 +1,13 @@
 import clock from "clock";
 import * as document from "document";
 import { preferences } from "user-settings";
+import { battery } from 'power';
 import * as util from "../common/utils";
 
 // Update the clock every minute
 clock.granularity = "minutes";
 
 // TIME
-let separator = document.getElementById("separator");
 let hours1 = document.getElementById("hours1");
 let hours2 = document.getElementById("hours2");
 let mins1 = document.getElementById("mins1");
@@ -47,4 +47,10 @@ function setMins(val) {
 
 function drawDigit(val, place) {
   place.image = `${val}.png`;
+}
+
+function updateBatteryLevel() {
+  let batLevel = battery.chargelevel;
+    
+  
 }

@@ -12,6 +12,15 @@
   fill: cyan;
 }
 
+#battery_percentage {
+  font-size: 20;
+  font-family: System-Regular;
+  x: $+5;
+  y: 30;
+  text-anchor: start;
+  fill: goldenrod;
+}
+
 .num-background {
   fill: cyan;
   x: $+3%;

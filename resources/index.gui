@@ -1,6 +1,7 @@
 <svg class="background">
   <section id="top">
-
+      <text id="battery_percentage">100%</text>
+      
       <image href="8.png"  class="num-background prime" />
       <image href="8.png"  class="num-background" />
       <image href="separator.png" class="num-background seperator" />
