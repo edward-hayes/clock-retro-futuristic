@@ -7,14 +7,21 @@ import * as util from "../common/utils";
 // Update the clock every minute
 clock.granularity = "minutes";
 
-// TIME
+let days = document.getElementsByClassName("day")
+
 let hours1 = document.getElementById("hours1");
 let hours2 = document.getElementById("hours2");
 let mins1 = document.getElementById("mins1");
 let mins2 = document.getElementById("mins2");
 
+let batteryLabel = document.getElementById("battery_percentage")
+
+
 clock.ontick = (evt) => {
   let today = evt.date;
+  
+  let day = today.getDay()
+  setDay(day)
   
   let hours = today.getHours();
   if (preferences.clockDisplay === "12h") {
@@ -28,6 +35,8 @@ clock.ontick = (evt) => {
   
   let mins = util.zeroPad(today.getMinutes());
   setMins(mins);
+  
+  updateBatLevel()
 
 }
 
@@ -49,8 +58,11 @@ function drawDigit(val, place) {
   place.image = `${val}.png`;
 }
 
-function updateBatteryLevel() {
-  let batLevel = battery.chargelevel;
-    
-  
+function updateBatLevel() {
+  let batLevel = battery.chargeLevel;
+  batteryLabel.text = batLevel + "%";
+}
+
+function setDay(val) {
+  days[val].style.opacity = 1;
 }
