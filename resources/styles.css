@@ -12,6 +12,15 @@
   fill: cyan;
 }
 
+#battery_icon {
+  height: 30;
+  width: 30;
+  x: 0;
+  y: 9;
+  fill: goldenrod;
+  opacity: 1;
+}
+
 #battery_percentage {
   font-size: 20;
   font-family: System-Regular;
@@ -27,7 +36,7 @@
   y: 30%;
   width: 20%;
   height: 60%;
-  opacity: .1;
+  opacity: .04;
 }
 
 .num-foreground {
@@ -49,6 +58,16 @@
 .prime {
   x: 0;
 }
+
+.day {
+  x: $+3%;
+  y: 5;
+  width: 32;
+  height: 15;
+  fill: 'cyan';
+  opacity: .04;
+}
+
 
 #top {
   x: 4%;
