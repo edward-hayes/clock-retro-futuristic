@@ -12,11 +12,20 @@
   fill: cyan;
 }
 
-#battery_icon {
-  height: 30;
-  width: 30;
+#battery_icon_background {
+  height: 16;
+  width: 34;
   x: 0;
-  y: 9;
+  y: 15;
+  fill: goldenrod;
+  opacity: .08;
+}
+
+#battery_icon {
+  height: 16;
+  width: 34;
+  x: 0;
+  y: 15;
   fill: goldenrod;
   opacity: 1;
 }
@@ -36,7 +45,7 @@
   y: 30%;
   width: 20%;
   height: 60%;
-  opacity: .04;
+  opacity: .05;
 }
 
 .num-foreground {
@@ -65,7 +74,7 @@
   width: 32;
   height: 15;
   fill: 'cyan';
-  opacity: .04;
+  opacity: .05;
 }
 
 
