@@ -1,8 +1,18 @@
 <svg class="background">
   <section id="top">
       <image href="battery_full.png" id="battery_icon_background" />
-      <image href="battery_20.png" id="battery_icon" />  
-      <text id="battery_percentage">100%</text>
+      <image href="battery_20.png" id="battery_icon" />
+      <section id="battery_percentage">
+        <image href="8.png"  class="bat_percentage_background prime" />
+        <image href="8.png"  class="bat_percentage_background" />
+        <image href="8.png"  class="bat_percentage_background" />
+        
+        <image id="bat1" href="1.png"  class="bat_percentage_foreground prime" />
+        <image id="bat2" href="0.png"  class="bat_percentage_foreground" />
+        <image id="bat3" href="0.png"  class="bat_percentage_foreground" />
+        <image id="bat4" href="blank.png"  class="bat_percentage_foreground" />
+      </section>
+
 
       <image href="8.png"  class="num-background prime" />
       <image href="8.png"  class="num-background" />
