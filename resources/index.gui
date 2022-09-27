@@ -1,6 +1,7 @@
 <svg class="background">
   <section id="top">
-      <image href="battery_low.png" id="battery_icon" />
+      <image href="battery_full.png" id="battery_icon_background" />
+      <image href="battery_20.png" id="battery_icon" />  
       <text id="battery_percentage">100%</text>
 
       <image href="8.png"  class="num-background prime" />
@@ -26,6 +27,6 @@
       <image href="day_sat.png" class="day" />
 
     
-    <text id="hello" font-family="System-Regular">Hello World!</text>
+
   </section>
 </svg>
