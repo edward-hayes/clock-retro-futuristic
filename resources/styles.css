@@ -31,12 +31,25 @@
 }
 
 #battery_percentage {
-  font-size: 20;
-  font-family: System-Regular;
-  x: $+5;
-  y: 30;
-  text-anchor: start;
+  x: $+2;
+}
+
+.bat_percentage_background {
+  height: 16;
+  width: 10;
+  x: $+1;
+  y: 15;
   fill: goldenrod;
+  opacity: .08;
+}
+
+.bat_percentage_foreground {
+  height: 16;
+  width: 10;
+  x: $+1;
+  y: 15;
+  fill: goldenrod;
+  opacity: 1;
 }
 
 .num-background {
