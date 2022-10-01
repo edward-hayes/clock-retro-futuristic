@@ -2,19 +2,9 @@
   viewport-fill: #635666;
 }
 
-#myLabel {
-  font-size: 80;
-  font-family: System-Bold;
-  text-length: 32;
-  text-anchor: middle;
-  x: 50%;
-  y: 50%+40;
-  fill: cyan;
-}
-
 #battery_icon_background {
-  height: 16;
-  width: 34;
+  height: 17;
+  width: 35;
   x: 0;
   y: 15;
   fill: goldenrod;
@@ -22,8 +12,8 @@
 }
 
 #battery_icon {
-  height: 16;
-  width: 34;
+  height: 17;
+  width: 35;
   x: 0;
   y: 15;
   fill: goldenrod;
@@ -58,7 +48,7 @@
   y: 30%;
   width: 20%;
   height: 60%;
-  opacity: .05;
+  opacity: .06;
 }
 
 .num-foreground {
@@ -83,13 +73,56 @@
 
 .day {
   x: $+3%;
-  y: 5;
+  y: 0;
   width: 32;
-  height: 15;
-  fill: 'cyan';
-  opacity: .05;
+  height: 17;
+  fill: cyan;
 }
 
+.hr-logo {
+  fill: cyan;
+  x: 0;
+  y: 10;
+  width: 21;
+  height: 60;
+  opacity: 60;
+}
+
+.hr-background {
+  fill: cyan;
+  x: $+3%;
+  y: 10;
+  width: 33;
+  height: 60;
+  opacity: .06;
+}
+
+.hr-foreground {
+  fill: cyan;
+  x: $+3%;
+  y: 10;
+  width: 33;
+  height: 60;
+  opacity: 1;
+}
+
+.steps-background {
+  fill: cyan;
+  x: $+3%;
+  y: 0;
+  width: 18;
+  height: 32;
+  opacity: .06;
+}
+
+.cal-background {
+  fill: cyan;
+  x: $+3%;
+  y: 0;
+  width: 18;
+  height: 32;
+  opacity: .06;
+}
 
 #top {
   x: 4%;
@@ -99,14 +132,33 @@
 }
 
 #bottom {
-  x: 0;
+  x: 4%;
   y: $;
-  width: 100%;
+  width: 96%;
   height: 40%;
 }
 
-#hello {
-  fill: goldenrod;
-  x: 50%;
-  text-anchor: middle;
+#stats {
+  y: $;
+  x: 0;
 }
+
+.stats_grid {
+  x: $;
+  y: 5;
+  width: 45%;
+  height: 100%;
+}
+
+.pace_stats {
+  x: 0;
+  y: $+10;
+  width: 100%;
+  height: 32;
+}
+
+#stats-right {
+  x: $+10;
+}
+
+
