@@ -28,13 +28,47 @@
 
   </section>
   <section id="bottom">
-      <image href="day_sun.png" class="day prime" />
+      <image href="day_sun.png" x="0" class="day" />
       <image href="day_mon.png" class="day" />
       <image href="day_tue.png" class="day" />
       <image href="day_wed.png" class="day" />
       <image href="day_thu.png" class="day" />
       <image href="day_fri.png" class="day" />
       <image href="day_sat.png" class="day" />
+    <section id="stats">
+      <section class="stats_grid">
+        <image href="hr_right.png" class="hr-logo" />
+        <image href="8.png"  class="hr-background" />
+        <image href="8.png"  class="hr-background" />
+        <image href="8.png"  class="hr-background" />
+        
+        <image href="hr_right.png" class="hr-logo" />
+        <image id="hr1" href="blank.png"  class="hr-foreground" />
+        <image id="hr2" href="blank.png"  class="hr-foreground" />
+        <image id="hr3" href="blank.png"  class="hr-foreground" />
+        
+      </section>
+      <section class="stats_grid" id="stats-right">
+        
+        <section class="pace_stats">
+          <image href="8.png"  class="cal-background" />
+          <image href="8.png"  class="cal-background" />
+          <image href="8.png"  class="cal-background" />
+          <image href="8.png"  class="cal-background" />
+          <image href="8.png"  class="cal-background" />
+        </section>
+        
+        <section class="pace_stats">
+          <image href="8.png"  class="steps-background" />
+          <image href="8.png"  class="steps-background" />
+          <image href="8.png"  class="steps-background" />
+          <image href="8.png"  class="steps-background" />
+          <image href="8.png"  class="steps-background" />
+        </section>
+        
+      </section>
+      
+    </section>
 
     
 

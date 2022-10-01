@@ -2,11 +2,13 @@ import clock from "clock";
 import * as document from "document";
 import { preferences } from "user-settings";
 import { battery } from 'power';
+import { HeartRateSensor } from "heart-rate";
 import * as util from "../common/utils";
+import { BodyPresenceSensor } from "body-presence";
+import { display } from "display";
 
-// Update the clock every minute
-clock.granularity = "minutes";
 
+// Time Elements
 let days = document.getElementsByClassName("day");
 
 let hours1 = document.getElementById("hours1");
@@ -14,6 +16,7 @@ let hours2 = document.getElementById("hours2");
 let mins1 = document.getElementById("mins1");
 let mins2 = document.getElementById("mins2");
 
+// Battery Elements
 let batteryLabel = document.getElementById("battery_percentage");
 let batteryIcon = document.getElementById("battery_icon");
 let bat1 = document.getElementById("bat1");
@@ -21,7 +24,75 @@ let bat2 = document.getElementById("bat2");
 let bat3 = document.getElementById("bat3");
 let bat4 = document.getElementById("bat4");
 
+// HR Elements
+let hr1 = document.getElementById("hr1");
+let hr2 = document.getElementById("hr2");
+let hr3 = document.getElementById("hr3");
 
+// Update Heart Rate Monitor
+if (HeartRateSensor) {
+  const hrm = new HeartRateSensor({ frequency: 1 });
+  hrm.addEventListener("reading", () => {
+
+    setHeartRateLabel(hrm.heartRate);
+  });
+  hrm.start();
+
+
+
+  // Stop Heart Rate Monitor if Not on Wrist
+  if (BodyPresenceSensor) {
+    const body = new BodyPresenceSensor();
+    body.addEventListener("reading", () => {
+      if (!body.present) {
+        hrm.stop();
+        let hr_digit = [hr1,hr2,hr3]; 
+        hr_digit.forEach(makeBlank);
+        
+        function makeBlank(element) {
+          util.drawDigit("blank",element);
+        }
+      } else {
+        hrm.start();
+      }
+    });
+    body.start();
+  }
+  
+  // Stop Heart Rate Monitor When Display is Off
+  display.addEventListener("change", () => {
+    // Automatically stop the sensor when the screen is off to conserve battery
+    display.on ? hrm.start() : hrm.stop();
+  });
+  hrm.start();
+}
+
+function setHeartRateLabel(val) {
+    if (val > 199) {
+    util.drawDigit(2,hr1);
+    util.drawDigit(Math.floor((val -200)/ 10),hr2);
+    util.drawDigit(Math.floor((val -200) % 10),hr3); 
+    }
+  
+    if (200 > val > 99) {
+    util.drawDigit(1,hr1);
+    util.drawDigit(Math.floor((val -100)/ 10),hr2);
+    util.drawDigit(Math.floor((val -100) % 10),hr3);
+
+  } else {
+    util.drawDigit(Math.floor(val / 10), hr1);
+    util.drawDigit(Math.floor(val % 10), hr2);
+    hr3.display = "none";
+
+  }
+}
+
+// Update the clock every minute
+clock.granularity = "minutes";
+
+
+
+// Update Clock
 clock.ontick = (evt) => {
   let today = evt.date;
   
@@ -47,22 +118,22 @@ clock.ontick = (evt) => {
 
 function setHours(val) {
   if (val > 9) {
-    drawDigit(Math.floor(val / 10), hours1);
+    util.drawDigit(Math.floor(val / 10), hours1);
   } else {
-    drawDigit("", hours1);
+    util.drawDigit("", hours1);
   }
-  drawDigit(Math.floor(val % 10), hours2);
+  util.drawDigit(Math.floor(val % 10), hours2);
 }
 
 function setMins(val) {
-  drawDigit(Math.floor(val / 10), mins1);
-  drawDigit(Math.floor(val % 10), mins2);
+  util.drawDigit(Math.floor(val / 10), mins1);
+  util.drawDigit(Math.floor(val % 10), mins2);
 }
 
-function drawDigit(val, place) {
-  place.image = `${val}.png`;
-}
 
+
+
+// Updatet Battery
 function updateBatLevel() {
   let batLevel = battery.chargeLevel;
   if (batLevel == 100) {batteryIcon.image = 'battery_full.png';} else
@@ -78,19 +149,30 @@ function updateBatLevel() {
 function setBatLabel(val) {
 
   if (val == 100) {
-    drawDigit(1,bat1);
-    drawDigit(0,bat2);
-    drawDigit(0,bat3);
-    bat4.image = 'percent.png'
+    util.drawDigit(1,bat1);
+    util.drawDigit(0,bat2);
+    util.drawDigit(0,bat3);
+    util.drawDigit("percent",bat4);
   } else {
-    drawDigit(Math.floor(val / 10), bat1);
-    drawDigit(Math.floor(val % 10), bat2);
-    bat3.image = 'percent.png'
-    bat4.imgae = 'blank.png'
+    util.drawDigit(Math.floor(val / 10), bat1);
+    util.drawDigit(Math.floor(val % 10), bat2);
+    util.drawDigit("percent",bat3);
+    util.drawDigit("blank",bat4);
     
   }
 }
 
+
+// Update Day
 function setDay(val) {
-  days[val].style.opacity = 1;
+  for (let idx =0; idx < days.length; idx++) {
+    switch(idx) {
+      case val:
+        days[idx].style.opacity = 1;
+        break;
+      default:
+        days[idx].style.opacity =.09;
+    }
+    
+  }
 }
