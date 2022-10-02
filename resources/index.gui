@@ -51,26 +51,38 @@
       <section class="stats_grid" id="stats-right">
         
         <section class="pace_stats">
+          <image href="c_md.png" x="0" class="cal-background" />
           <image href="8.png"  class="cal-background" />
           <image href="8.png"  class="cal-background" />
           <image href="8.png"  class="cal-background" />
           <image href="8.png"  class="cal-background" />
           <image href="8.png"  class="cal-background" />
+          
+          <image href="c_md.png" x="0" class="cal-foreground" />
+          <image id = "cal1" href="8.png"  class="cal-foreground" />
+          <image id = "cal2" href="8.png"  class="cal-foreground" />
+          <image id = "cal3" href="8.png"  class="cal-foreground" />
+          <image id = "cal4" href="8.png"  class="cal-foreground" />
+          <image id = "cal5" href="8.png"  class="cal-foreground" />
         </section>
         
         <section class="pace_stats">
+          <image href="s_md.png" x="0" class="steps-foreground" />
           <image href="8.png"  class="steps-background" />
           <image href="8.png"  class="steps-background" />
           <image href="8.png"  class="steps-background" />
           <image href="8.png"  class="steps-background" />
           <image href="8.png"  class="steps-background" />
-        </section>
-        
-      </section>
-      
+          
+          <image href="s_md.png" x="0" class="steps-background" />
+          <image id = "steps1" href="8.png"  class="steps-foreground" />
+          <image id = "steps2" href="8.png"  class="steps-foreground" />
+          <image id = "steps3" href="8.png"  class="steps-foreground" />
+          <image id = "steps4" href="8.png"  class="steps-foreground" />
+          <image id = "steps5" href="8.png"  class="steps-foreground" />
+          
+        </section>      
+      </section>   
     </section>
-
-    
-
   </section>
 </svg>
