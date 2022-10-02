@@ -1,4 +1,8 @@
 <svg class="background">
+  <rect width="292" height="116" x="4" y="46" fill="springgreen"/>
+  <rect width="290" height="114" x="5" y="47" fill="#635666" />
+  <rect width="158" height="77" x="4" y="205" fill="goldenrod" />
+  <rect width="156" height="75" x="5" y="206" fill="#635666" />
   <section id="top">
       <image href="battery_full.png" id="battery_icon_background" />
       <image href="battery_20.png" id="battery_icon" />
@@ -12,6 +16,16 @@
         <image id="bat3" href="0.png"  class="bat_percentage_foreground" />
         <image id="bat4" href="blank.png"  class="bat_percentage_foreground" />
       </section>
+      <section id="date">
+        <image id="mon" href="mon_12.png" />
+        <section id="date-num">
+          <image href="8.png"  class="date_num_background prime" />
+          <image href="8.png"  class="date_num_background" />
+          
+          <image id="date1" href="1.png"  class="date_num_foreground prime" />
+          <image id="date2" href="0.png"  class="date_num_foreground" />
+        </section>
+      </section>  
 
 
       <image href="8.png"  class="num-background prime" />
@@ -37,6 +51,7 @@
       <image href="day_sat.png" class="day" />
     <section id="stats">
       <section class="stats_grid">
+
         <image href="hr_right.png" class="hr-logo" />
         <image href="8.png"  class="hr-background" />
         <image href="8.png"  class="hr-background" />
