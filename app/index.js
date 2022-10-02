@@ -6,7 +6,8 @@ import { HeartRateSensor } from "heart-rate";
 import * as util from "../common/utils";
 import { BodyPresenceSensor } from "body-presence";
 import { display } from "display";
-
+import { today } from "user-activity";
+import { me as appbit } from "appbit";
 
 // Time Elements
 let days = document.getElementsByClassName("day");
@@ -28,6 +29,20 @@ let bat4 = document.getElementById("bat4");
 let hr1 = document.getElementById("hr1");
 let hr2 = document.getElementById("hr2");
 let hr3 = document.getElementById("hr3");
+
+// steps elements
+let steps1 = document.getElementById("steps1");
+let steps2 = document.getElementById("steps2");
+let steps3 = document.getElementById("steps3");
+let steps4 = document.getElementById("steps4");
+let steps5 = document.getElementById("steps5");
+
+// calorie elements
+let cal1 = document.getElementById("cal1");
+let cal2 = document.getElementById("cal2");
+let cal3 = document.getElementById("cal3");
+let cal4 = document.getElementById("cal4");
+let cal5 = document.getElementById("cal5");
 
 // Update Heart Rate Monitor
 if (HeartRateSensor) {
@@ -67,23 +82,16 @@ if (HeartRateSensor) {
   hrm.start();
 }
 
-function setHeartRateLabel(val) {
-    if (val > 199) {
-    util.drawDigit(2,hr1);
-    util.drawDigit(Math.floor((val -200)/ 10),hr2);
-    util.drawDigit(Math.floor((val -200) % 10),hr3); 
+function setHeartRateLabel(heartRate) {
+  const hrArray = String(heartRate).split("");
+  let hr_digit = [hr1,hr2,hr3]; 
+  for (let idx=0; idx < hr_digit.length; idx++) {
+    if (hrArray[idx] !== undefined ) {
+      util.drawDigit(hrArray[idx],hr_digit[idx]);
     }
-  
-    if (200 > val > 99) {
-    util.drawDigit(1,hr1);
-    util.drawDigit(Math.floor((val -100)/ 10),hr2);
-    util.drawDigit(Math.floor((val -100) % 10),hr3);
-
-  } else {
-    util.drawDigit(Math.floor(val / 10), hr1);
-    util.drawDigit(Math.floor(val % 10), hr2);
-    hr3.display = "none";
-
+    else {
+      util.drawDigit("blank",hr_digit[idx]);
+    }
   }
 }
 
@@ -94,12 +102,12 @@ clock.granularity = "minutes";
 
 // Update Clock
 clock.ontick = (evt) => {
-  let today = evt.date;
+  let date = evt.date;
   
-  let day = today.getDay()
+  let day = date.getDay()
   setDay(day);
   
-  let hours = today.getHours();
+  let hours = date.getHours();
   if (preferences.clockDisplay === "12h") {
     // 12h format
     hours = hours % 12 || 12;
@@ -109,10 +117,12 @@ clock.ontick = (evt) => {
   }
   setHours(hours);
   
-  let mins = util.zeroPad(today.getMinutes());
+  let mins = util.zeroPad(date.getMinutes());
   setMins(mins);
   
   updateBatLevel();
+  setSteps(today.adjusted.steps);
+  setCals(today.adjusted.calories);
 
 }
 
@@ -133,7 +143,7 @@ function setMins(val) {
 
 
 
-// Updatet Battery
+// Update Battery
 function updateBatLevel() {
   let batLevel = battery.chargeLevel;
   if (batLevel == 100) {batteryIcon.image = 'battery_full.png';} else
@@ -174,5 +184,33 @@ function setDay(val) {
         days[idx].style.opacity =.09;
     }
     
+  }
+}
+
+// Update Steps
+function setSteps(todaySteps) {
+  const stepsArray = String(todaySteps).split("");
+  let steps = [steps1,steps2,steps3,steps4,steps5];
+  for (let idx=0; idx < steps.length; idx++) {
+    if (stepsArray[idx] !== undefined ) {
+      util.drawDigit(stepsArray[idx],steps[idx]);
+    }
+    else {
+      util.drawDigit("blank",steps[idx]);
+    }
+  }
+}
+
+// Update Calories
+function setCals(todayCals) {
+  const calsArray = String(todayCals).split("");
+  let cals = [cal1,cal2,cal3,cal4,cal5];
+  for (let idx=0; idx < cals.length; idx++) {
+    if (calsArray[idx] !== undefined ) {
+      util.drawDigit(calsArray[idx],cals[idx]);
+    }
+    else {
+      util.drawDigit("blank",cals[idx]);
+    }
   }
 }

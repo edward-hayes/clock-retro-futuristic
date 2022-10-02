@@ -115,6 +115,14 @@
   opacity: .06;
 }
 
+.steps-foreground {
+  fill: springgreen;
+  x: $+3%;
+  y: 0;
+  width: 18;
+  height: 32;
+}
+
 .cal-background {
   fill: cyan;
   x: $+3%;
@@ -124,6 +132,13 @@
   opacity: .06;
 }
 
+.cal-foreground {
+  fill: mediumvioletred;
+  x: $+3%;
+  y: 0;
+  width: 18;
+  height: 32;
+}
 #top {
   x: 4%;
   y: 0;
@@ -158,7 +173,7 @@
 }
 
 #stats-right {
-  x: $+10;
+  x: $+20;
 }
 
 
