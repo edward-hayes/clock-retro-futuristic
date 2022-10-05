@@ -10,3 +10,21 @@ export function zeroPad(i) {
 export function drawDigit(val, place) {
   place.image = `${val}.png`;
 }
+
+// draw numbers on the corresponding elements
+export function setNumber(number, elements) {
+  let number = number;
+  const strArray = String(number).split("");
+  for (let idx=0; idx < elements.length; idx++) {
+    if(strArray[idx] !== undefined ) {
+      drawDigit(strArray[idx],elements[idx]);
+    }
+    else {
+      makeBlank(elements[idx]);
+    }
+  }
+}
+
+export function makeBlank(element) {
+  drawDigit("blank",element);
+}
