@@ -1,5 +1,51 @@
-.background {
+#main {
   viewport-fill: #635666;
+}
+
+#top {
+  x: 4%;
+  y: 0;
+  width: 96%;
+  height: 60%;
+}
+
+#bottom {
+  x: 0;
+  y: 59%;
+  width: 100%;
+  height: 40%;
+}
+
+#stats {
+  y: $;
+  x: 0;
+}
+
+.stats_grid {
+  x: $;
+  y: 5;
+  width: 45%;
+  height: 100%;
+}
+
+.pace_stats {
+  x: 0;
+  y: $+6;
+  width: 100%;
+  height: 31;
+}
+
+#stats-right {
+  x: 168;
+  y: 9
+}
+
+#battery_icon {
+  height: 17;
+  width: 35;
+  x: 0;
+  y: 15;
+  fill: goldenrod;
 }
 
 #battery_icon_background {
@@ -10,16 +56,6 @@
   fill: goldenrod;
   opacity: .08;
 }
-
-#battery_icon {
-  height: 17;
-  width: 35;
-  x: 0;
-  y: 15;
-  fill: goldenrod;
-  opacity: 1;
-}
-
 #battery_percentage {
   x: $+2;
 }
@@ -33,13 +69,20 @@
   opacity: .08;
 }
 
-.bat_percentage_foreground {
+.bat {
   height: 17;
   width: 10;
   x: $+1;
   y: 15;
   fill: goldenrod;
-  opacity: 1;
+}
+
+#mon {
+  x: 0;
+  y: 15;
+  width: 32;
+  height: 17;
+  fill: cyan;
 }
 
 #date {
@@ -59,7 +102,7 @@
   opacity: .06;
 }
 
-.date_num_foreground {
+.date {
   height: 17;
   width: 10;
   x: $+1;
@@ -67,24 +110,7 @@
   fill: cyan;
 }
 
-#mon {
-  x: 0;
-  y: 15;
-  width: 32;
-  height: 17;
-  fill: cyan;
-}
-
-.num-background {
-  fill: cyan;
-  x: $+3%;
-  y: 28%;
-  width: 20%;
-  height: 60%;
-  opacity: .06;
-}
-
-.num-foreground {
+.num {
   fill: cyan;
   x: $+3%;
   y: 28%;
@@ -98,10 +124,6 @@
   y: 40%;
   width: 5%;
   height: 71;
-}
-
-.prime {
-  x: 0;
 }
 
 .day {
@@ -130,13 +152,16 @@
   opacity: .06;
 }
 
-.hr-foreground {
+.hr {
   fill: cyan;
   x: $+3%;
   y: 10;
   width: 37;
   height: 70;
-  opacity: 1;
+}
+
+#steps {
+  x: $+3;
 }
 
 .steps-background {
@@ -148,7 +173,7 @@
   opacity: .06;
 }
 
-.steps-foreground {
+.step {
   fill: springgreen;
   x: $+3%;
   y: 0;
@@ -158,11 +183,7 @@
 }
 
 #calories {
-  x: $;
-}
-
-#steps {
-  x: $;
+  x: $+3;
 }
 
 .cal-background {
@@ -174,7 +195,7 @@
   opacity: .06;
 }
 
-.cal-foreground {
+.cal {
   fill: springgreen;
   x: $+3%;
   y: 0;
@@ -183,50 +204,21 @@
   opacity: .8;
 }
 
-#top {
-  x: 4%;
-  y: 0;
-  width: 96%;
-  height: 60%;
-}
-
-#bottom {
-  x: 0;
-  y: 59%;
-  width: 100%;
-  height: 40%;
-}
-
-#stats {
-  y: $;
-  x: 0;
-}
-
 .stats-logo {
-  x: $+28;
+  x: 2;
   y: 0;
   width: 23;
   height: 31;
   fill: #635666
 }
 
-.stats_grid {
-  x: $;
-  y: 5;
-  width: 45%;
-  height: 100%;
-}
-
-.pace_stats {
+.prime {
   x: 0;
-  y: $+6;
-  width: 100%;
-  height: 31;
 }
 
-#stats-right {
-  x: 168;
-  y: 9
+.background {
+  opacity: .06;
 }
+
 
 

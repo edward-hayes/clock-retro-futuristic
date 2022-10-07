@@ -39,7 +39,7 @@ if (HeartRateSensor) {
     body.addEventListener("reading", () => {
       if (!body.present) {
         hrm.stop();
-        elementsHR.forEach(util.makeBlank);   
+        util.setNumber('',elementsHR);
       } else {
         hrm.start();
       }
@@ -55,10 +55,8 @@ if (HeartRateSensor) {
   hrm.start();
 }
 
-// Update the clock every minute
+// Update Clock, Battery, Day, Steps, Cals every minute
 clock.granularity = "minutes";
-
-// Update Clock, Battery, Day, Steps, Cals
 clock.ontick = (evt) => {
   let date = evt.date;
   let mins = util.zeroPad(date.getMinutes());
@@ -90,11 +88,10 @@ function setDate(date) {
   let month = date.getMonth();
   let date = util.zeroPad(date.getDate());
   
-  util.drawDigit("mon_" + month, mon);
+  util.setImage(`mon_${month}`, mon);
   util.setNumber(date,elementsDate);
 }
 
-// Update Day
 function setDay(val) {
   for (let idx =0; idx < elementsDays.length; idx++) {
     switch(idx) {
@@ -108,15 +105,14 @@ function setDay(val) {
   }
 }
 
-// Update Battery
 function updateBatLevel() {
   let batLevel = battery.chargeLevel;
-  if (batLevel == 100) {batteryIcon.image = 'battery_full.png';} else
-  if (batLevel >= 80) {batteryIcon.image = 'battery_80.png';} else
-  if (batLevel >= 60) {batteryIcon.image = 'battery_60.png';} else
-  if (batLevel >= 40) {batteryIcon.image = 'battery_40.png';} else
-  if (batLevel >= 20) {batteryIcon.image = 'battery_20.png';} else
-  if (batLevel < 20) {batteryIcon.image = 'battery_low.png';}
+  if (batLevel == 100) {util.setImage('battery_full',batteryIcon);} else
+  if (batLevel >= 80) {util.setImage('battery_80',batteryIcon);} else
+  if (batLevel >= 60) {util.setImage('battery_60',batteryIcon);} else
+  if (batLevel >= 40) {util.setImage('battery_40',batteryIcon);} else
+  if (batLevel >= 20) {util.setImage('battery_20',batteryIcon);} else
+  if (batLevel < 20) {util.setImage('battery_low',batteryIcon);}
   
   setBatLabel(batLevel);
 }
