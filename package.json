@@ -5,7 +5,7 @@
   "fitbit": {
     "appUUID": "e5dc0dbc-103d-416c-81f2-3c5aaf9d2efc",
     "appType": "clockface",
-    "appDisplayName": "Hello World",
+    "appDisplayName": "80s Retro Clock",
     "iconFile": "resources/icon.png",
     "wipeColor": "",
     "requestedPermissions": [
@@ -17,7 +17,7 @@
     ],
     "i18n": {
       "en-US": {
-        "name": "Hello World"
+        "name": "80s Retro Clock"
       }
     },
     "defaultLanguage": "en-US"

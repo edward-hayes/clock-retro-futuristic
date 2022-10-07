@@ -1,50 +1,50 @@
-<svg class="background">
+<svg id="main">
   <rect width="292" height="116" x="4" y="46" fill="springgreen"/>
   <rect width="290" height="114" x="5" y="47" fill="#635666" />
   <rect width="156" height="77" x="4" y="205" fill="goldenrod" />
   <rect width="154" height="75" x="5" y="206" fill="#635666" />
   <rect width="27" height="71" x="7" y="208" fill="goldenrod" />
-  <rect x="166" width="130" height="77" y="205" fill="mediumvioletred"/>
+  <rect x="165" width="132" height="81" y="203" fill="mediumvioletred"/>
   <rect x="167" width="128" height="75" y="206" fill="#635666"/>
   <rect x="169" width="25" height="33" y="208" fill="mediumvioletred" />
   <rect x="169" width="25" height="34" y="245" fill="mediumvioletred" />
   
   <section id="top">
       <image href="battery_full.png" id="battery_icon_background" />
-      <image href="battery_20.png" id="battery_icon" />
+      <image href="" id="battery_icon" />
       <section id="battery_percentage">
         <image href="8.png"  class="bat_percentage_background prime" />
         <image href="8.png"  class="bat_percentage_background" />
         <image href="8.png"  class="bat_percentage_background" />
         
-        <image href="1.png"  class="bat bat_percentage_foreground prime" />
-        <image href="0.png"  class="bat bat_percentage_foreground" />
-        <image href="0.png"  class="bat bat_percentage_foreground" />
-        <image href="blank.png"  class="bat bat_percentage_foreground" />
+        <image class="bat prime" />
+        <image class="bat" />
+        <image class="bat" />
+        <image class="bat" />
       </section>
       <section id="date">
-        <image id="mon" href="" />
+        <image id="mon"/>
         <section id="date-num">
           <image href="8.png"  class="date_num_background prime" />
           <image href="8.png"  class="date_num_background" />
           
-          <image href="1.png"  class="date date_num_foreground prime" />
-          <image href="0.png"  class="date date_num_foreground" />
+          <image class="date prime" />
+          <image class="date" />
         </section>
       </section>  
 
 
-      <image href="8.png"  class="num-background prime" />
-      <image href="8.png"  class="num-background" />
-      <image href="separator.png" class="num-background seperator" />
-      <image href="8.png"  class="num-background" />
-      <image href="8.png"  class="num-background" />
+      <image href="8.png"  class="num background prime" />
+      <image href="8.png"  class="num background" />
+      <image href="separator.png" class="num background seperator" />
+      <image href="8.png"  class="num background" />
+      <image href="8.png"  class="num background" />
 
-      <image href="2.png" class="hour num-foreground prime" />
-      <image href="3.png" class="hour num-foreground" />
-      <image href="separator.png" class="num-foreground seperator" />
-      <image href="3.png"  class="min num-foreground" />
-      <image href="7.png"  class="min num-foreground" />
+      <image href="2.png" class="hour num prime" />
+      <image href="3.png" class="hour num" />
+      <image href="separator.png" class="num seperator" />
+      <image href="3.png"  class="min num" />
+      <image href="7.png"  class="min num" />
 
   </section>
   <section id="bottom">
@@ -64,44 +64,44 @@
         <image href="8.png"  class="hr-background" />
         
         <image href="hr_right.png" class="hr-logo" />
-        <image href="blank.png"  class="hr hr-foreground" />
-        <image href="blank.png"  class="hr hr-foreground" />
-        <image href="blank.png"  class="hr hr-foreground" />
+        <image class="hr" />
+        <image class="hr" />
+        <image class="hr" />
         
       </section>
       <section class="stats_grid" id="stats-right">
         
         <section class="pace_stats">
-          <image href="c_md.png" x="2" class="stats-logo" />
+          <image href="c_md.png" class="stats-logo" />
           <section id="calories">
-            <image href="8.png"  x="3" class="cal-background" />
+            <image href="8.png"  class="cal-background prime" />
             <image href="8.png"  class="cal-background" />
             <image href="8.png"  class="cal-background" />
             <image href="8.png"  class="cal-background" />
             <image href="8.png"  class="cal-background" />
 
-            <image href="8.png"  x="3" class="cal cal-foreground" />
-            <image href="8.png"  class="cal cal-foreground" />
-            <image href="8.png"  class="cal cal-foreground" />
-            <image href="8.png"  class="cal cal-foreground" />
-            <image href="8.png"  class="cal cal-foreground" />
+            <image class="cal prime" />
+            <image class="cal" />
+            <image class="cal" />
+            <image class="cal" />
+            <image class="cal" />
           </section>
         </section>
         
         <section class="pace_stats">
-          <image href="s_md.png" x="2" class="stats-logo" />
+          <image href="s_md.png" class="stats-logo" />
           <section id="steps">
-            <image href="8.png"  x="3" class="steps-background" />
+            <image href="8.png"  class="steps-background prime" />
             <image href="8.png"  class="steps-background" />
             <image href="8.png"  class="steps-background" />
             <image href="8.png"  class="steps-background" />
             <image href="8.png"  class="steps-background" />
 
-            <image href="8.png"  x="3" class="step steps-foreground" />
-            <image href="8.png"  class="step steps-foreground" />
-            <image href="8.png"  class="step steps-foreground" />
-            <image href="8.png"  class="step steps-foreground" />
-            <image href="8.png"  class="step steps-foreground" />
+            <image class="step prime" />
+            <image class="step" />
+            <image class="step" />
+            <image class="step" />
+            <image class="step" />
           </section>
           
         </section>      
