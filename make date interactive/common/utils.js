@@ -1,0 +1,12 @@
+// Add zero in front of numbers < 10
+export function zeroPad(i) {
+  if (i < 10) {
+    i = "0" + i;
+  }
+  return i;
+}
+
+// set the correct digit image to corresponding var
+export function drawDigit(val, place) {
+  place.image = `${val}.png`;
+}

@@ -1,0 +1,8 @@
+- change colors at sunset/sunrise a.k.a nightmode
+- add "exercise mode" where rate of pulse check is much higher
+- add differnt views if you swipe right or click button
+    - ie HR historical view
+    - weather view
+
+Version 3 ideas
+- add personal API to companion app to sync data from fitbit to personal server for greater analysis and webserving
