@@ -76,7 +76,7 @@ clock.ontick = (evt) => {
 function setHours(hours, elementsHour) {
   if (preferences.clockDisplay === "12h") {
     // 12h format
-    hours = hours % 12 || 12;
+    hours = util.zeroPad(hours % 12 || 12);
   } else {
     // 24h format
     hours = util.zeroPad(hours);
