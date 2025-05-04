@@ -1,0 +1,25 @@
+<svg viewport-fill="#635666" width="336" height="336">
+  <!-- Top side (moved down a bit) -->
+  <line x1="84" y1="12" x2="252" y2="12" class="octagon" />
+
+  <!-- Top-right diagonal (shorter inward) -->
+  <line x1="252" y1="12" x2="324" y2="84" class="octagon" />
+
+  <!-- Right side (moved left a bit) -->
+  <line x1="324" y1="84" x2="324" y2="252" class="octagon" />
+
+  <!-- Bottom-right diagonal (shorter inward) -->
+  <line x1="324" y1="252" x2="252" y2="324" class="octagon" />
+
+  <!-- Bottom side (moved up a bit) -->
+  <line x1="252" y1="324" x2="84" y2="324" class="octagon" />
+
+  <!-- Bottom-left diagonal (shorter inward) -->
+  <line x1="84" y1="324" x2="12" y2="252" class="octagon" />
+
+  <!-- Left side (moved right a bit) -->
+  <line x1="12" y1="252" x2="12" y2="84" class="octagon" />
+
+  <!-- Top-left diagonal (shorter inward) -->
+  <line x1="12" y1="84" x2="84" y2="12" class="octagon" />
+</svg>
