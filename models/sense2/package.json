@@ -10,10 +10,13 @@
   "fitbit": {
     "appUUID": "bf59faf6-1e9a-43a1-9bd8-05f7fa225fca",
     "appType": "clockface",
-    "appDisplayName": "Retro Futuristic Sense 2",
+    "appDisplayName": "80s Retro Clock",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
-    "requestedPermissions": [],
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_activity"
+    ],
     "buildTargets": [
       "atlas",
       "vulcan"
