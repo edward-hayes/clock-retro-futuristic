@@ -8,7 +8,6 @@ import { BodyPresenceSensor } from "body-presence";
 import { display } from "display";
 import { today } from "user-activity";
 
-// cacheStepsEndpoints();
 
 // time elements
 let elementsMin = document.getElementsByClassName("min");
@@ -130,50 +129,3 @@ function setBatLabel(batPercentage) {
   let batPercentage = String(batPercentage) + "%";
   util.setNumber(batPercentage, elementsBat);
 }
-
-// function setStepsOctagon(n) {
-//   n = Math.max(0, Math.min(n, 100));
-
-//   const segments = document.getElementsByClassName("steps-octagon");
-//   const total = segments.length;
-
-//   const progress = (n / 100) * total;
-//   const fullVisible = Math.floor(progress);
-//   const partialProgress = progress - fullVisible;
-
-//   // Show full segments
-//   for (let i = 0; i < total; i++) {
-//     const seg = segments[i];
-//     if (i < fullVisible) {
-//       seg.style.visibility = "visible";
-//       // Reset to full endpoint in case it was trimmed before
-//       seg.setAttribute("x2", seg.dataset.x2);
-//       seg.setAttribute("y2", seg.dataset.y2);
-//     } else if (i === fullVisible && partialProgress > 0) {
-//       seg.style.visibility = "visible";
-
-//       // Get original start and end coordinates
-//       const x1 = parseFloat(seg.getAttribute("x1"));
-//       const y1 = parseFloat(seg.getAttribute("y1"));
-//       const x2 = parseFloat(seg.dataset.x2);
-//       const y2 = parseFloat(seg.dataset.y2);
-
-//       // Calculate partial point
-//       const newX = x1 + (x2 - x1) * partialProgress;
-//       const newY = y1 + (y2 - y1) * partialProgress;
-
-//       seg.setAttribute("x2", newX.toFixed(1));
-//       seg.setAttribute("y2", newY.toFixed(1));
-//     } else {
-//       seg.style.visibility = "hidden";
-//     }
-//   }
-// }
-
-// function cacheStepsEndpoints() {
-//   const segments = document.getElementsByClassName("steps-octagon");
-//   for (let seg of segments) {
-//     seg.dataset.x2 = seg.getAttribute("x2");
-//     seg.dataset.y2 = seg.getAttribute("y2");
-//   }
-// }
