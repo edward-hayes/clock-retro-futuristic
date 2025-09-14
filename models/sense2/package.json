@@ -1,0 +1,31 @@
+{
+  "name": "retro-futuristic-sense2",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@fitbit/sdk": "~7.2.0-pre.0",
+    "@fitbit/sdk-cli": "~1.8.0-pre.10"
+  },
+  "fitbit": {
+    "appUUID": "85bf894f-b0a6-46e7-a2b0-24b8b6be495d",
+    "appType": "clockface",
+    "appDisplayName": "80s Retro Clock",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#ffffff",
+    "requestedPermissions": [
+      "access_heart_rate",
+      "access_activity"
+    ],
+    "buildTargets": [
+      "hera",
+      "rhea"
+    ],
+    "i18n": {},
+    "defaultLanguage": "en-US"
+  },
+  "scripts": {
+    "build": "fitbit-build",
+    "debug": "fitbit"
+  }
+}

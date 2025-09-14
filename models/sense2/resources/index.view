@@ -1,0 +1,175 @@
+<svg viewport-fill="#635666" >
+
+  <!-- stats left border -->
+  <rect x="23" width="151" height="81" y="225" fill="goldenrod" />
+  <rect x="25" width="147" height="77" y="227" fill="#635666" />
+
+  <!-- hr logo background -->
+  <rect x="27" width="24" height="34" y="230" fill="goldenrod" />
+
+  <!-- stats right border -->
+  <rect x="181" width="132" height="81" y="225" fill="mediumvioletred"/>
+  <rect x="183" width="128" height="77" y="227" fill="#635666"/>
+
+  <!-- steps and calories background squares -->
+  <rect x="185" width="24" height="33" y="229" fill="mediumvioletred" />
+  <rect x="185" width="24" height="34" y="266" fill="mediumvioletred" />
+
+  <!-- cut off corners in bottom --> 
+  <rect x="0" width="52" height="20%" y="276" fill="#635666" />
+  <rect x="281" width="20%" height="20%" y="276" fill="#635666" />
+
+  <line x1="34" x2="300" y1="53" y2="53" class ="time-border" />
+  <line x1="23" x2="312" y1 ="188" y2="188" class ="time-border" />
+
+  <!-- octagon -->
+  <!-- N -->
+  <line x1="64" y1="12" x2="272" y2="12" class="octagon" />
+
+  <!-- NE -->
+  <line x1="272" y1="12" x2="324" y2="67" class="octagon" />
+
+  <!-- E -->
+  <line x1="324" y1="67" x2="324" y2="272" class="octagon" />
+
+  <!-- SE -->
+  <line x1="324" y1="272" x2="272" y2="324" class="octagon" />
+
+  <!-- S -->
+  <line x2="64" y2="324" x1="272" y1="324" class="octagon" />
+
+  <!-- SW -->
+  <line x1="64" y1="324" x2="12" y2="272" class="octagon" />
+
+  <!-- W -->
+  <line x2="12" y2="67" x1="12" y1="272" class="octagon" />
+
+  <!-- NW -->
+  <line x1="12" y1="67" x2="64" y2="12" class="octagon" />
+
+  <!-- steps octagon -->
+  <!-- S  -->
+  <line x1="66" y1="320" x2="270" y2="320" class="steps-octagon"/>
+
+  <!-- SE  -->
+  <line x1="270" y1="320" x2="320" y2="270" class="steps-octagon"/>
+
+  <!-- E -->
+  <line x1="320" y1="270" x2="320" y2="68" class="steps-octagon"/>
+
+  <!-- NE  -->
+  <line x1="320" y1="68" x2="270" y2="16" class="steps-octagon"/>
+
+  <!-- N  -->
+  <line x2="66" y2="16" x1="270" y1="16"  class="steps-octagon"/>
+
+  <!-- NW  -->
+  <line x1="66" y1="16" x2="16" y2="68" class="steps-octagon"/>
+
+  <!-- W -->
+  <line x2="16" y2="270" x1="16" y1="68" class="steps-octagon"/>
+
+  <!-- SW  -->
+  <line x1="16" y1="270" x2="66" y2="320" class="steps-octagon"/>
+  
+  <section id="top">
+      <section id="battery-section">
+        <image href="battery_full.png" id="battery_icon_background" />
+        <image href="" id="battery_icon" />
+        <section id="battery_percentage">
+          <image href="8.png"  class="bat_percentage_background prime" />
+          <image href="8.png"  class="bat_percentage_background" />
+          <image href="8.png"  class="bat_percentage_background" />
+          
+          <image class="bat prime" />
+          <image class="bat" />
+          <image class="bat" />
+          <image class="bat" />
+        </section>
+      </section>
+      <section id="date-section">
+        <image id="mon"/>
+        <section id="date-num">
+          <image href="8.png"  class="date_num_background prime" />
+          <image href="8.png"  class="date_num_background" />
+          
+          <image class="date prime" />
+          <image class="date" />
+        </section>
+      </section>  
+
+
+      <image href="8.png"  class="num background prime" />
+      <image href="8.png"  class="num background" />
+      <image href="separator.png" class="num background seperator" />
+      <image href="8.png"  class="num background" />
+      <image href="8.png"  class="num background" />
+
+      <image href="2.png" class="hour num prime" />
+      <image href="3.png" class="hour num" />
+      <image href="separator.png" class="num seperator" />
+      <image href="3.png"  class="min num" />
+      <image href="7.png"  class="min num" />
+
+  </section>
+  <section id="bottom">
+      <image href="day_sun.png" class="day" />
+      <image href="day_mon.png" class="day" />
+      <image href="day_tue.png" class="day" />
+      <image href="day_wed.png" class="day" />
+      <image href="day_thu.png" class="day" />
+      <image href="day_fri.png" class="day" />
+      <image href="day_sat.png" class="day" />
+    <section id="stats">
+      <section class="stats_grid" id="stats-left">
+
+        <image href="h.png" class="hr-logo" />
+        <image href="8.png"  class="hr-background" />
+        <image href="8.png"  class="hr-background" />
+        <image href="8.png"  class="hr-background" />
+        
+        <image href="h.png" class="hr-logo" />
+        <image class="hr" />
+        <image class="hr" />
+        <image class="hr" />
+        
+      </section>
+      <section class="stats_grid" id="stats-right">        
+        <section class="pace_stats">
+          <image href="s_md.png" class="stats-logo" />
+          <section id="steps">
+            <image href="8.png"  class="steps-background prime" />
+            <image href="8.png"  class="steps-background" />
+            <image href="8.png"  class="steps-background" />
+            <image href="8.png"  class="steps-background" />
+            <image href="8.png"  class="steps-background" />
+
+            <image class="step prime" />
+            <image class="step" />
+            <image class="step" />
+            <image class="step" />
+            <image class="step" />
+          </section>
+
+                  <section class="pace_stats">
+          <image href="c_md.png" class="stats-logo" />
+          <section id="calories">
+            <image href="8.png"  class="cal-background prime" />
+            <image href="8.png"  class="cal-background" />
+            <image href="8.png"  class="cal-background" />
+            <image href="8.png"  class="cal-background" />
+            
+
+            <image class="cal prime" />
+            <image class="cal" />
+            <image class="cal" />
+            <image class="cal" />
+            
+          </section>
+        </section>
+          
+        </section>      
+      </section>   
+    </section>
+  </section>
+</svg>
